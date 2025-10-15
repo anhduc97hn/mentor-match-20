@@ -1,3 +1,5 @@
+"use client"
+
 import { useFormContext, Controller } from "react-hook-form";
 import { Checkbox, FormControlLabel } from "@mui/material";
 

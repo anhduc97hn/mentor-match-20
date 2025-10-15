@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { FormProvider, FTextField } from "../../components/form";
 import { useForm } from "react-hook-form";

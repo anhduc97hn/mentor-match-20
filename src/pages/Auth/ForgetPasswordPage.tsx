@@ -1,4 +1,4 @@
-// ForgotPasswordPage.tsx
+"use client"
 
 import type { FC } from "react";
 import { FormProvider, FTextField } from "../../components/form";

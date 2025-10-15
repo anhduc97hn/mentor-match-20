@@ -1,3 +1,5 @@
+"use client"
+
 import { FormProvider as RHFormProvider, UseFormReturn } from "react-hook-form";
 import { ReactNode, FormEventHandler } from "react";
 

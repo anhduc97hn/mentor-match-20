@@ -1,3 +1,5 @@
+"use client"
+
 import { useFormContext, Controller } from "react-hook-form";
 import { Switch, FormControlLabel } from "@mui/material";
 
