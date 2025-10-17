@@ -1,4 +1,4 @@
-import BrowseMentorPageClient from "@/src/pages/Public/BrowseMentor/BrowseMentorPage";
+import BrowseMentorPageClient from "@/src/pageComponents/Public/BrowseMentor/BrowseMentorPage";
 import { getUserProfilesServer } from "@/src/data/user"; // Create this utility function
 
 // Define the initial filter state (Server-side defaults)

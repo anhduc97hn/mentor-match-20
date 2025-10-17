@@ -1,2 +1,2 @@
-import LoginPage from "@/src/pages/Auth/LoginPage";
+import LoginPage from "@/src/pageComponents/Auth/LoginPage";
 export default LoginPage

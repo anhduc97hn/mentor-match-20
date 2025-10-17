@@ -1,4 +1,4 @@
-import HomePageClient from "@/src/pages/Public/Homepage/HomePage";
+import HomePageClient from "@/src/pageComponents/Public/Homepage/HomePage";
 
 import { fetchFeaturedMentors } from '@/src/data/user'; 
 

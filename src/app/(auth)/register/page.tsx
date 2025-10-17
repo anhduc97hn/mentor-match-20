@@ -1,3 +1,3 @@
-import RegisterPage from "@/src/pages/Auth/RegisterPage";
+import RegisterPage from "@/src/pageComponents/Auth/RegisterPage";
 
 export default RegisterPage

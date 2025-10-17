@@ -1,4 +1,4 @@
-import MentorPageClient from '@/src/pages/Public/MentorDetail/MentorPage';
+import MentorPageClient from '@/src/pageComponents/Public/MentorDetail/MentorPage';
 
 // app/mentors/[mentorId]/page.tsx
 import { getMentorProfileServer } from '@/src/data/user'; // Import the new server utility

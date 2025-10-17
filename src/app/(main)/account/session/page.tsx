@@ -1,3 +1,3 @@
-import UserSession from "@/src/pages/User/UserSession";
+import UserSession from "@/src/pageComponents/User/UserSession";
 
 export default UserSession
