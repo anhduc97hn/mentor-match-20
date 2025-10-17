@@ -5,7 +5,7 @@ import {
   Container,
   IconButton,
   InputAdornment,
-  Link,
+  Link as MUILink,
   Stack,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -13,7 +13,10 @@ import { FCheckbox, FTextField, FormProvider } from "../../components/form";
 import { LoadingButton } from "@mui/lab";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+// import { Link as RouterLink, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import {useRouter} from "next/navigation"
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -44,7 +47,8 @@ const defaultValues: RegisterFormInputs = {
 
 // Define the component as a React Functional Component (React.FC)
 const RegisterPage: React.FC = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const router = useRouter()
   const auth = useAuth(); // Consider defining a type for the return value of useAuth
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showPasswordConfirmation, setShowPasswordConfirmation] =
@@ -68,7 +72,8 @@ const RegisterPage: React.FC = () => {
     const { name, email, password, isMentor } = data;
     try {
       await auth.register({ name, email, password, isMentor }, () => {
-        navigate("/", { replace: true });
+        // navigate("/", { replace: true });
+        router.replace("/")
       });
     } catch (error: any) { // Using 'any' as the specific error shape is unknown
       reset();
@@ -88,9 +93,9 @@ const RegisterPage: React.FC = () => {
           )}
           <Alert severity="info">
             Already have an account?{" "}
-            <Link variant="subtitle2" component={RouterLink} to="/login">
+            <MUILink variant="subtitle2" component={Link} href="/login">
               Sign in
-            </Link>
+            </MUILink>
           </Alert>
 
           <FTextField name="name" label="Full name" />
