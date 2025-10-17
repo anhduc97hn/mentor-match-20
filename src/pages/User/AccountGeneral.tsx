@@ -14,7 +14,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { updateUserProfile } from '../../slices/userProfileSlice';
 import useAuth from '../../hooks/useAuth';
-import { useAppDispatch, useAppSelector } from '@/src/app/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/appService/hooks';
 
 // Define the schema for form validation
 const UserGeneralSchema = yup.object().shape({

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { getSessions, updateSessionStatus } from '@/src/slices/sessionSlice';
 import SessionList from './SessionList';
 import { UserProfile } from '@/src/types/user';
-import { useAppDispatch, useAppSelector } from '@/src/app/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/appService/hooks';
 import { Session } from '@/src/types/session';
 
 // Define props for the wrapper component

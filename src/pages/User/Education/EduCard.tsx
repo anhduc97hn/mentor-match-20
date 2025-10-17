@@ -14,7 +14,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useDispatch } from "react-redux";
 import { educationRemove } from "../../../slices/resourceSlice";
 import { Education } from "@/src/types/user";
-import { useAppDispatch } from "@/src/app/hooks";
+import { useAppDispatch } from "@/src/appService/hooks";
 
 // Define the types for the component's props.
 interface EduCardProps {

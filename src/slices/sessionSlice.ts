@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import apiService from "../app/apiService";
-import { AppDispatch, AppThunk } from "../app/store";
+import apiService from "../appService/apiService";
+import { AppDispatch, AppThunk } from "../appService/store";
 import { Session } from "../types/session";
 
 interface SessionState {

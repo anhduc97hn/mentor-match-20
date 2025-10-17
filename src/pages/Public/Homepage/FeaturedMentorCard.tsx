@@ -2,27 +2,15 @@ import { Avatar, Box, Link as MUILink, Typography } from "@mui/material";
 import React from "react";
 import Link from "next/link";
 import { UserProfile } from "@/src/types/user";
-// --- Type Definitions ---
 
-// Define the shape of the userProfile object.
-// This ensures that any component using FeaturedMentorCard passes the correct props.
-// interface UserProfile {
-//   _id: string;
-//   avatarUrl?: string; // Avatar URL is optional
-//   name: string;
-//   currentPosition: string;
-//   currentCompany: string;
-// }
 
 // Define the type for the component's props.
 interface Props {
   userProfile: UserProfile;
 }
 
-// --- Component ---
-
-// Use React.FC<Props> to type the functional component and its props.
 const FeaturedMentorCard: React.FC<Props> = ({ userProfile }) => {
+
   return (
     <Box
       sx={{
@@ -33,7 +21,7 @@ const FeaturedMentorCard: React.FC<Props> = ({ userProfile }) => {
       }}
     >
       <Avatar
-        src={userProfile.avatarUrl}
+        src={userProfile.avatarUrl as string}
         alt={userProfile.name}
         sx={{ width: "80px", height: "80px" }}
       />

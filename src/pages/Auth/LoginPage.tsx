@@ -51,7 +51,7 @@ const LoginPage: React.FC = () => {
     formState: { errors, isSubmitting },
   } = methods;
 
-  const from = searchParams.get('redirect') || '/';
+  const from = searchParams?.get('redirect') || '/';
   const onSubmit = async (data: any) => {
     // const from = location.state?.from?.pathname || "/";
     const { email, password } = data;

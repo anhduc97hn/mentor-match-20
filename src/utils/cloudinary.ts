@@ -1,4 +1,4 @@
-import { CLOUDINARY_CLOUD_NAME, CLOUDINARY_UPLOAD_PRESET } from "../app/config";
+import { CLOUDINARY_CLOUD_NAME, CLOUDINARY_UPLOAD_PRESET } from "../appService/config";
 import axios from "axios";
 
 interface CloudinaryResponse {

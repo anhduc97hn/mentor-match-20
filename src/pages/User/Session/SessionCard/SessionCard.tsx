@@ -86,7 +86,7 @@ function SessionCard({ currentUserProfileId, session, prevStatus }: SessionCardP
         <Avatar
           sx={{ width: "50px", height: "50px" }}
           src={
-            currentUserProfileId === from._id ? to.avatarUrl : from.avatarUrl
+            currentUserProfileId === from._id ? to.avatarUrl as string : from.avatarUrl as string
           }
         />
         <Stack>

@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction, Slice, CaseReducerActions, Reducer } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import apiService from "../app/apiService";
-import { DATA_PER_PAGE } from "../app/config";
+import apiService from "../appService/apiService";
+import { DATA_PER_PAGE } from "../appService/config";
 import { getCurrentUserProfile } from "./userProfileSlice";
-import { AppDispatch, AppThunk } from "../app/store";
+import { AppDispatch, AppThunk } from "../appService/store";
 import { IDocument } from "../types/user";
 
 // Define the state structure with a generic type `T` for the resource data.

@@ -8,7 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LanguageIcon from '@mui/icons-material/Language';
 import StarIcon from '@mui/icons-material/Star';
 import Link from 'next/link';
-import NotFoundPage from '@/app/not-found'; // Adjust path
+import NotFoundPage from '@/src/app/not-found'; // Adjust path
 import LoadingScreen from '@/src/components/LoadingScreen'; // Adjust path
 import { fData } from '@/src/utils/numberFormat'; // Adjust path
 import { fDateToMonthYear } from '@/src/utils/formatTime'; // Adjust path

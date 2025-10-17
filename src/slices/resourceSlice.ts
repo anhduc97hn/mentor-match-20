@@ -1,5 +1,5 @@
 import { ActionCreatorWithoutPayload, ActionCreatorWithPayload, Slice } from "@reduxjs/toolkit";
-import { AppThunk } from "../app/store";
+import { AppThunk } from "../appService/store";
 import createResourceSlice from "./createResourceSlice";
 import { Education, Experience, Certification } from "../types/user";
 

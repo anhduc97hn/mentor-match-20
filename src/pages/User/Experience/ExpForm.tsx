@@ -9,7 +9,7 @@ import { experienceCreate, experienceUpdate } from "../../../slices/resourceSlic
 import { LoadingButton } from "@mui/lab";
 // import { RootState } from "../../../store"; // Assuming you have a RootState type for your Redux store
 import { Experience, Position } from "@/src/types/user";
-import { useAppDispatch, useAppSelector } from "@/src/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/src/appService/hooks";
 
 // Define the shape of the form data
 interface ExpFormData {

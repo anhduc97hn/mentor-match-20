@@ -1,8 +1,7 @@
 import HomePageClient from "@/src/pages/Public/Homepage/HomePage";
 
-import { fetchFeaturedMentors } from '@/src/data/user'; // <--- NEW server-side function
+import { fetchFeaturedMentors } from '@/src/data/user'; 
 
-// NOTE: Components are async by default in the App Router!
 export default async function HomePage() {
   
   // 1. Fetch data directly on the server (replaces Redux dispatch/select)

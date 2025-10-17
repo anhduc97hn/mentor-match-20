@@ -2,15 +2,12 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import FeaturedMentorCard from "./FeaturedMentorCard";
 
-// Define the type for the component's props.
 interface Props {
   userProfiles: any;
 }
 
-// --- Component ---
-
-// Use React.FC<Props> to type the functional component and its props.
 const FeaturedMentorList: React.FC<Props> = ({ userProfiles}) => {
+
   return (
     <>
       <Grid container spacing={3.5}>

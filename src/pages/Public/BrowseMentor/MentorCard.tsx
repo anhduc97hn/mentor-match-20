@@ -89,7 +89,7 @@ const MentorCard: React.FC<Props> = ({ mentor }) => {
     <Card sx={{ mt: 2, padding: 2 }}>
       <Stack direction="row" spacing={2}>
         <Avatar
-          src={mentor.avatarUrl}
+          src={mentor.avatarUrl as string}
           alt={mentor.name}
           sx={{ width: 50, height: 50 }}
         />

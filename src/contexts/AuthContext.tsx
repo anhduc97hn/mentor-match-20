@@ -1,12 +1,12 @@
 'use client'
 
 import { createContext, useReducer, useEffect, ReactNode } from "react";
-import apiService from "../app/apiService";
+import apiService from "../appService/apiService";
 import { useSelector } from "react-redux";
 import { isValidToken } from "../utils/jwt";
 import { toast } from "react-toastify";
 import { IMentorProfile, IRegularUserProfile, UserProfile } from "../types/user";
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../appService/hooks";
 
 interface AuthState {
   isInitialized: boolean;

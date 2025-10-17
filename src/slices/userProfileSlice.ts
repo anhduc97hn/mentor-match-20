@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-import apiService from '../app/apiService';
+import apiService from '../appService/apiService';
 import { cloudinaryUpload } from '../utils/cloudinary';
-import { AppThunk } from '@/src/app/store';
+import { AppThunk } from '@/src/appService/store';
 import { UserProfile } from '../types/user';
 
 interface UserProfileState {

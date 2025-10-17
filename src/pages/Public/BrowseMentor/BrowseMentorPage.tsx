@@ -21,7 +21,7 @@ import { useForm } from "react-hook-form";
 import "./BrowseMentorPage.css";
 import { getUserProfile } from "../../../slices/userProfileSlice";
 import FAutoComplete from "../../../components/form/FAutoComplete";
-import { useAppSelector, useAppDispatch } from '@/src/app/hooks'
+import { useAppSelector, useAppDispatch } from '@/src/appService/hooks'
 import { current } from "@reduxjs/toolkit";
 
 // Define the shape of the form data

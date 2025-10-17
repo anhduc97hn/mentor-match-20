@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 import { certificationCreate, certificationUpdate } from '../../../slices/resourceSlice';
 import { LoadingButton } from '@mui/lab';
 import { Certification, IDocument } from '@/src/types/user';
-import { useAppDispatch, useAppSelector } from '@/src/app/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/appService/hooks';
 
 const CertiSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),

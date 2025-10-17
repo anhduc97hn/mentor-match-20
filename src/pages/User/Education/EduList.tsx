@@ -6,7 +6,7 @@ import { educationGetAll } from "../../../slices/resourceSlice";
 import EduCard from "./EduCard";
 import LoadingScreen from "../../../components/LoadingScreen";
 import { Education } from "@/src/types/user";
-import { useAppDispatch, useAppSelector } from "@/src/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/src/appService/hooks";
 
 // Define the types for the component's props
 interface EduListProps {

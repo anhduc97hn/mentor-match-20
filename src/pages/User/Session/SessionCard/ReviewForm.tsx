@@ -18,7 +18,7 @@ import FRating from '../../../../components/form/FRating';
 import { useDispatch } from 'react-redux';
 // Assuming createReview is an async thunk that returns a promise
 import { createReview } from '../../../../slices/reviewSlice'; 
-import { useAppDispatch } from '@/src/app/hooks';
+import { useAppDispatch } from '@/src/appService/hooks';
 
 // Define the interface for the form data
 interface ReviewFormInputs {
@@ -82,10 +82,10 @@ export default function ReviewForm({children, sessionId}: ReviewFormProps) {
     await dispatch(
       // Ensure your createReview thunk expects these types
       createReview({ content, rating, sessionId, prevStatus: "completed"}) 
-    ).then(() => {
+    );
       reset();
       handleClose(); // Close modal on successful submission
-    });
+   
   };
 
   return (

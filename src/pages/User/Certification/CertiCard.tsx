@@ -14,7 +14,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { certificationRemove } from "../../../slices/resourceSlice";
 
 import { Certification } from "@/src/types/user";
-import { useAppDispatch } from "@/src/app/hooks";
+import { useAppDispatch } from "@/src/appService/hooks";
 interface CertiCardProps {
   certi: Certification;
   setCurrentCerti: Dispatch<SetStateAction<Certification | null>>;

@@ -12,7 +12,7 @@ import { sendSessionRequest } from '../../slices/sessionSlice';
 import { getSingleUserProfile } from '../../slices/userProfileSlice';
 import LoadingScreen from '../../components/LoadingScreen';
 import FDateTimePicker from '@/src/components/form/FDateTimePicker';
-import { useAppDispatch, useAppSelector } from '@/src/app/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/appService/hooks';
 import { useRouter } from 'next/navigation';
 import ProtectedPage from '@/src/components/withAuth';
 

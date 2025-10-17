@@ -1,25 +1,18 @@
-"use client"; // This directive is essential for client-side components
+"use client"; 
 
 import { Provider as ReduxProvider } from "react-redux";
-import { AppStore, makeStore } from "@/src/app/store"; // Adjust path to your Redux store
-import ThemeProvider from "@/src/theme"; // Adjust path as needed
-import { AuthProvider } from "@/src/contexts/AuthContext"; // Adjust path
-import { DatePicker } from "@/src/contexts/DatePicker"; // Adjust path
+import { AppStore, makeStore } from "@/src/appService/store";
+import ThemeProvider from "@/src/theme";
+import { AuthProvider } from "@/src/contexts/AuthContext"; 
+import { DatePicker } from "@/src/contexts/DatePicker"; 
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { useRef } from "react";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter"
 
-// Ensure your environment variable is defined
 const clientId = process.env.NEXT_PUBLIC_CLIENT_ID as string;
 
-// Type the props for the Providers component
 export default function Providers({ children }: { children: React.ReactNode }) {
-  // if (!clientId) {
-  //   // It's good practice to handle the case where the client ID might be missing.
-  //   console.error("Google OAuth Client ID is not configured.");
-  //   // You could return a loading state or an error message here.
-  //   return <>{children}</>; 
-  // }
-
+  
   const storeRef = useRef<AppStore | null>(null);
 
   if (!storeRef.current) {
@@ -29,6 +22,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   }
 
   return (
+    <AppRouterCacheProvider options={{ enableCssLayer: true }}>
     <ReduxProvider store={storeRef.current}>
       <AuthProvider>
         <GoogleOAuthProvider clientId={clientId}>
@@ -40,5 +34,6 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         </GoogleOAuthProvider>
       </AuthProvider>
     </ReduxProvider>
+    </AppRouterCacheProvider>
   );
 }

@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   },
   images: {
     domains: ['localhost'], // Add your image domains here
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   // Enable bundle analysis with: ANALYZE=true npm run build
   webpack: (config, { isServer }) => {

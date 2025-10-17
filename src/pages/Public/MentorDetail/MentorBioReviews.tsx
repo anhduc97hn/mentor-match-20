@@ -6,7 +6,7 @@ import { fDateToMonthYear } from "../../../utils/formatTime";
 import { LoadingButton } from "@mui/lab";
 import LoadingScreen from "../../../components/LoadingScreen";
 import { IMentorProfile } from "@/src/types/user";
-import { useAppDispatch, useAppSelector } from "@/src/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/src/appService/hooks";
 
 // Define the shape for the component's props
 interface Props {
@@ -78,7 +78,7 @@ const MentorBioReviews: React.FC<Props> = ({ selectedUser }) => {
                 >
                   <Avatar
                     sx={{ width: "50px", height: "50px", mb: 1 }}
-                    src={review.session?.from.avatarUrl}
+                    src={review.session?.from.avatarUrl as string}
                     alt={review.session?.from.name}
                   />
                   <Typography variant="subtitle2">

@@ -13,7 +13,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useDispatch } from "react-redux";
 import { experienceRemove } from "../../../slices/resourceSlice";
 import { Experience } from "@/src/types/user";
-import { useAppDispatch } from "@/src/app/hooks";
+import { useAppDispatch } from "@/src/appService/hooks";
 // Define the type for the position sub-object
 // interface Position {
 //   title: string;

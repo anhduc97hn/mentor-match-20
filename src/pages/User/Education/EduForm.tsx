@@ -8,7 +8,7 @@ import * as Yup from "yup";
 import { educationCreate, educationUpdate } from "../../../slices/resourceSlice";
 import { LoadingButton } from "@mui/lab";
 import { Education } from "@/src/types/user";
-import { useAppDispatch, useAppSelector } from "@/src/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/src/appService/hooks";
 
 
 // Define the shape of the form data

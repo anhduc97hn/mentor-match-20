@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import Providers from './providers'; // We will create this next
+import Providers from './providers'; 
 
 export const metadata: Metadata = {
   title: 'Mentor Match',
   description: 'A Next.js with TS app',
 };
 
-// Type the props for the RootLayout component
 export default function RootLayout({
   children,
 }: {

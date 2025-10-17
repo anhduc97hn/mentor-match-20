@@ -8,8 +8,8 @@ interface FSwitchProps {
   [key: string]: any;
 }
 
-function FSwitch({ name, ...other }: FSwitchProps) {
-  const { control } = useFormContext();
+function FSwitch({ name, label,...other }: FSwitchProps) {
+ const { control } = useFormContext();
 
   return (
     <FormControlLabel
@@ -20,6 +20,7 @@ function FSwitch({ name, ...other }: FSwitchProps) {
           render={({ field }) => <Switch {...field} checked={field.value} />}
         />
       }
+      label={label}
       {...other}
     />
   );

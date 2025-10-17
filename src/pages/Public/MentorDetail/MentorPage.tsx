@@ -22,7 +22,7 @@ import NotFoundPage from '../NotFoundPage';
 import { fData } from '../../../utils/numberFormat';
 import { fDateToMonthYear } from '../../../utils/formatTime';
 import useAuth from '../../../hooks/useAuth';
-import { useAppDispatch, useAppSelector } from '@/src/app/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/appService/hooks';
 import { UserProfile, IMentorProfile } from '@/src/types/user';
 import Link from 'next/link';
 

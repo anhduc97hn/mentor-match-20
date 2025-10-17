@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-import apiService from '../app/apiService';
+import apiService from '../appService/apiService';
 import { getSessions } from './sessionSlice';
-import { AppDispatch, AppThunk } from '../app/store';
+import { AppDispatch, AppThunk } from '../appService/store';
 import { Review } from '../types/review';
 
 // Define types

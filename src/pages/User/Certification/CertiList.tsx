@@ -6,7 +6,7 @@ import { certificationGetAll } from "../../../slices/resourceSlice";
 import CertiCard from "./CertiCard";
 import LoadingScreen from "../../../components/LoadingScreen";
 import { Certification } from "@/src/types/user";
-import { useAppDispatch, useAppSelector } from "@/src/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/src/appService/hooks";
 
 interface CertiListProps {
   setCurrentCerti: Dispatch<SetStateAction<Certification | null>>;

@@ -1,8 +1,6 @@
+import apiService from '@/src/appService/apiService';
+import { UserProfile } from '@/src/types/user';
 
-import apiService from '@/src/app/apiService'; // Assuming you move apiService to /lib
-import { UserProfile } from '@/src/types/user'; // Assuming you move types to /lib
-
-// Define the structure of the data the server needs to return to the page
 interface FeaturedUserProfilesData {
   userProfiles: UserProfile[];
   userProfilesById: Record<string, UserProfile>;
@@ -13,9 +11,7 @@ interface FeaturedUserProfilesData {
 export async function fetchFeaturedMentors(): Promise<FeaturedUserProfilesData> {
   try {
     // 1. Execute the API call directly (just like the thunk did)
-    const response = await apiService.get<any, { data: { userProfiles: UserProfile[] } }>(
-      `/userProfiles/featured`
-    );
+    const response = await apiService.get<any, { data: { userProfiles: UserProfile[] } }>(`/userProfiles/featured`);
 
     const userProfiles = response.data.userProfiles;
     const userProfilesById: Record<string, UserProfile> = {};
@@ -41,10 +37,6 @@ export async function fetchFeaturedMentors(): Promise<FeaturedUserProfilesData> 
     return { userProfiles: [], userProfilesById: {}, currentHomePageUsers: [] };
   }
 }
-
-// lib/data/user.ts or similar server utility file
-
-// Use types from your Redux slice for clarity
 interface GetUserProfileParams {
   page: number;
   limit?: number;
@@ -56,8 +48,6 @@ interface GetUserProfileParams {
     city?: string;
   };
 }
-
-// Assuming your API response structure looks like the Redux state expects
 interface UserProfileData {
   userProfiles: UserProfile[];
   currentPageUsers: string[]; // array of IDs
@@ -66,11 +56,7 @@ interface UserProfileData {
   totalPages: number;
 }
 
-export async function getUserProfilesServer(
-  params: GetUserProfileParams
-): Promise<UserProfileData> {
-  // 1. Construct the filter object for the POST body
-  
+export async function getUserProfilesServer(params: GetUserProfileParams): Promise<UserProfileData> {
   const { page, limit, filter } = params;
   const requestParams: GetUserProfileParams = { page, limit };
   if (filter) {
@@ -78,29 +64,26 @@ export async function getUserProfilesServer(
   }
 
   try {
-      const response = await apiService.get(`/userProfiles/`, { params: requestParams });
-   const userProfiles = response.data.userProfiles as UserProfile[];
+    const response = await apiService.get(`/userProfiles/`, { params: requestParams });
+    const userProfiles = response.data.userProfiles as UserProfile[];
     const userProfilesById: Record<string, UserProfile> = {};
     const currentPageUsers: string[] = [];
 
-    // 2. Process the data into the structure your component needs (data normalization)
     userProfiles.forEach(userProfile => {
       userProfilesById[userProfile._id] = userProfile;
       currentPageUsers.push(userProfile._id);
     });
 
-    // 3. Return the clean, processed data object
     return {
       userProfiles: userProfiles,
       userProfilesById: userProfilesById,
       currentPageUsers: currentPageUsers,
       total: response.data.count,
-      totalPages: response.data.totalPages 
+      totalPages: response.data.totalPages,
     };
-
   } catch (error) {
     // Log the error on the server
-    console.error("Server-side mentor fetch error:", error);
+    console.error('Server-side mentor fetch error:', error);
     // Return empty data structure on failure
     return {
       userProfiles: [],
@@ -112,8 +95,7 @@ export async function getUserProfilesServer(
   }
 }
 
-// Assuming your API response structure for a single user is IMentorProfile
-import { IMentorProfile } from '@/src/types/user'; // Use your actual type
+import { IMentorProfile } from '@/src/types/user'; 
 
 export async function getMentorProfileServer(mentorId: string): Promise<IMentorProfile | null> {
   try {

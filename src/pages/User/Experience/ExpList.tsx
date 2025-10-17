@@ -6,7 +6,7 @@ import { experienceGetAll } from "../../../slices/resourceSlice";
 import ExpCard from "./ExpCard";
 import LoadingScreen from "../../../components/LoadingScreen";
 import { Experience } from "@/src/types/user";
-import { useAppDispatch, useAppSelector } from "@/src/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/src/appService/hooks";
 
 // Define the types for the component's props
 interface ExpListProps {

@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { updateSessionStatus } from "../../../../slices/sessionSlice"; 
 import { useRouter } from "next/navigation";
 import { Session } from "@/src/types/session";
-import { useAppDispatch } from "@/src/app/hooks";
+import { useAppDispatch } from "@/src/appService/hooks";
 
 // Define the component's props with explicit typing
 interface ActionButtonProps {
